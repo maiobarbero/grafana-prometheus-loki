@@ -29,5 +29,3 @@ scrape_configs:
       #   labels:
       #     job: cronjob
       #     __path__: /var/log/cronjob/**/*.log
-      # - targets:
-      #     - localhost
