@@ -1,0 +1,33 @@
+server:
+  http_listen_port: 3100
+  grpc_listen_port: 9096
+
+positions:
+  filename: /tmp/positions./tmp/positions.yaml
+
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+
+#local machine logs
+scrape_configs:
+  - job_name: local
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: logs
+          __path__: /var/log/
+          
+      # Example of mapping multiple log folders.
+      # - targets:
+      #     - localhost
+      #   labels:
+      #     job: docker
+      #     __path__: /var/log/docker/**/*.log
+      # - targets:
+      #     - localhost
+      #   labels:
+      #     job: cronjob
+      #     __path__: /var/log/cronjob/**/*.log
+      # - targets:
+      #     - localhost
