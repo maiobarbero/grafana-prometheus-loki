@@ -18,11 +18,12 @@ For the first access to your Grafana dashboard use *user=admin* and *password=ad
 ## Checking the Status of Services
 You can check the status of the services by visiting the following URLs:
 
-`localhost:3100/metrics`: This page shows various metrics related to the application.
-`localhost:3100/ready`: This page indicates whether the application is ready. If it doesn't say "ready", try refreshing the page.
-`localhost:9090`: This page shows the Prometheus dashboard where you can query your metrics.
-`localhost:9100/metrics`: This page shows the metrics exposed by the Node Exporter.
-`localhost:3000`: Access Grafana
+- `localhost:3100/metrics`: This page shows various metrics related to the application.
+- `localhost:3100/ready`: This page indicates whether the application is ready. If it doesn't say "ready", try refreshing the page.
+- `localhost:9090`: This page shows the Prometheus dashboard where you can query your metrics.
+- `localhost:9100/metrics`: This page shows the metrics exposed by the Node Exporter.
+- `localhost:3000`: Access Grafana
+
 *Please note that these URLs assume that the application is running on your local machine. If you're running the application on a different machine, replace localhost with the IP address or hostname of that machine.*
 
 ## Prometheus Configuration
